@@ -968,3 +968,1016 @@ button, input, select, textarea { font: inherit; }
     grid-template-columns: 1fr;
   }
 }
+/* ======================================================
+   HIRK PREMIUM HOME
+   ====================================================== */
+
+.hir-home {
+  min-height: calc(100svh - 74px);
+  background: #f2efe8;
+  display: flex;
+  align-items: center;
+}
+
+.hir-home-shell {
+  width: min(1320px, calc(100% - 64px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  min-height: 690px;
+  box-shadow: 0 30px 90px rgba(36, 32, 26, .08);
+}
+
+/* LEFT IMAGE */
+
+.hir-visual {
+  position: relative;
+  min-height: 690px;
+  overflow: hidden;
+  background: #23352e;
+}
+
+.hir-visual-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter:
+    saturate(.72)
+    contrast(.96)
+    brightness(.88);
+  transform: scale(1.015);
+}
+
+.hir-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(9, 24, 19, .14) 0%,
+      rgba(9, 24, 19, .18) 30%,
+      rgba(9, 24, 19, .78) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(9, 24, 19, .38) 0%,
+      rgba(9, 24, 19, .04) 68%
+    );
+}
+
+.hir-visual-top {
+  position: absolute;
+  top: 34px;
+  left: 38px;
+  right: 38px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hir-visual-top img {
+  width: 47px;
+  height: 47px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: .94;
+}
+
+.hir-visual-top span {
+  color: rgba(255,255,255,.88);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.hir-visual-content {
+  position: absolute;
+  z-index: 2;
+  left: 40px;
+  right: 48px;
+  bottom: 40px;
+  color: white;
+}
+
+.hir-location {
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(255,255,255,.72);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.hir-visual h1 {
+  margin: 0;
+  max-width: 610px;
+  color: white;
+  font-size: clamp(3rem, 4.6vw, 4.6rem);
+  line-height: .98;
+  font-weight: 650;
+  letter-spacing: -.055em;
+}
+
+.hir-visual-content > p {
+  max-width: 520px;
+  margin: 20px 0 0;
+  color: rgba(255,255,255,.79);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.hir-package {
+  margin-top: 29px;
+  padding: 23px 0;
+  display: grid;
+  grid-template-columns: 175px 1fr;
+  gap: 31px;
+  border-top: 1px solid rgba(255,255,255,.22);
+  border-bottom: 1px solid rgba(255,255,255,.22);
+}
+
+.hir-package-price > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #d2b477;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.hir-package-price strong {
+  display: block;
+  color: #fff;
+  font-size: 31px;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.hir-package-price small {
+  margin-left: 4px;
+  color: rgba(255,255,255,.57);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.hir-package-benefits {
+  display: grid;
+  gap: 8px;
+  align-content: center;
+}
+
+.hir-package-benefits span {
+  position: relative;
+  padding-left: 18px;
+  color: rgba(255,255,255,.78);
+  font-size: 11.5px;
+}
+
+.hir-package-benefits span::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #dbc18e;
+  font-weight: 800;
+}
+
+.hir-links {
+  margin-top: 21px;
+  display: flex;
+  gap: 28px;
+}
+
+.hir-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,.92);
+  font-size: 11px;
+  font-weight: 700;
+  transition:
+    color .18s ease,
+    transform .18s ease;
+}
+
+.hir-links a span {
+  color: #d2b477;
+  transition: transform .18s ease;
+}
+
+.hir-links a:hover {
+  color: white;
+}
+
+.hir-links a:hover span {
+  transform: translateX(3px);
+}
+
+/* RIGHT FORM */
+
+.hir-form-side {
+  min-height: 690px;
+  padding: 55px 52px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(190, 161, 105, .07),
+      transparent 34%
+    ),
+    #f8f6f1;
+}
+
+.hir-form-card {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.hir-form-head {
+  margin-bottom: 29px;
+}
+
+.hir-form-head > span {
+  display: block;
+  margin-bottom: 9px;
+  color: #17503f;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .17em;
+}
+
+.hir-form-head h2 {
+  margin: 0;
+  color: #15211c;
+  font-size: 31px;
+  line-height: 1.1;
+  font-weight: 680;
+  letter-spacing: -.035em;
+}
+
+.hir-form-head p {
+  margin: 10px 0 0;
+  color: #787f7a;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* override InterestForm only on this page */
+
+.hir-form-card .interest-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 15px;
+}
+
+.hir-form-card .field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #5e6762;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.hir-form-card .field input,
+.hir-form-card .field select {
+  width: 100%;
+  height: 49px;
+  padding: 0 4px;
+  border: 0;
+  border-bottom: 1px solid #cbc6bc;
+  border-radius: 0;
+  background: transparent;
+  color: #15211c;
+  outline: none;
+  font-size: 12px;
+  box-shadow: none;
+  transition:
+    border-color .18s ease,
+    background .18s ease;
+}
+
+.hir-form-card .field input::placeholder {
+  color: #b5b1aa;
+}
+
+.hir-form-card .field input:hover,
+.hir-form-card .field select:hover {
+  border-color: #8e948f;
+}
+
+.hir-form-card .field input:focus,
+.hir-form-card .field select:focus {
+  border-color: #17503f;
+  background: rgba(255,255,255,.38);
+  box-shadow: none;
+}
+
+.hir-form-card .consent-row {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 9px;
+  color: #747b77;
+  font-size: 9.5px;
+  line-height: 1.5;
+}
+
+.hir-form-card .consent-row input {
+  accent-color: #17503f;
+}
+
+.hir-form-card .submit-button {
+  grid-column: 1 / -1;
+  height: 52px;
+  margin-top: 3px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 2px;
+  background: #174f40;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+  font-weight: 750;
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    background .18s ease,
+    transform .18s ease;
+}
+
+.hir-form-card .submit-button:hover {
+  background: #103c30;
+  transform: translateY(-1px);
+}
+
+.hir-form-meta {
+  margin-top: 25px;
+  padding-top: 17px;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  border-top: 1px solid #dedad1;
+  color: #9a9e99;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .hir-home {
+    display: block;
+  }
+
+  .hir-home-shell {
+    grid-template-columns: 1fr;
+    width: min(760px, calc(100% - 40px));
+    padding: 35px 0 55px;
+    box-shadow: none;
+  }
+
+  .hir-visual {
+    min-height: 650px;
+  }
+
+  .hir-form-side {
+    min-height: auto;
+    padding: 48px 42px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .hir-home-shell {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hir-visual {
+    min-height: 640px;
+  }
+
+  .hir-visual-top {
+    top: 25px;
+    left: 22px;
+    right: 22px;
+  }
+
+  .hir-visual-content {
+    left: 22px;
+    right: 22px;
+    bottom: 27px;
+  }
+
+  .hir-visual h1 {
+    font-size: 2.8rem;
+  }
+
+  .hir-package {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .hir-links {
+    gap: 17px;
+    flex-direction: column;
+  }
+
+  .hir-form-side {
+    padding: 42px 22px 50px;
+  }
+
+  .hir-form-card .interest-form {
+    grid-template-columns: 1fr;
+  }
+
+  .hir-form-card .consent-row,
+  .hir-form-card .submit-button {
+    grid-column: 1;
+  }
+
+  .hir-form-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+}
+/* ======================================================
+   HIRK PREMIUM FINETUNE
+   ====================================================== */
+
+.hir-home {
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(185, 159, 108, 0.07),
+      transparent 27%
+    ),
+    #f2efe8;
+}
+
+.hir-home-shell {
+  grid-template-columns: 1.06fr .94fr;
+  min-height: 665px;
+  box-shadow:
+    0 28px 80px rgba(34, 30, 25, 0.085);
+}
+
+/* IMAGE SIDE */
+
+.hir-visual {
+  min-height: 665px;
+}
+
+.hir-visual-image {
+  object-position: 56% 46%;
+  filter:
+    saturate(.68)
+    contrast(.97)
+    brightness(.9);
+}
+
+.hir-visual-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 22, 18, .05) 0%,
+      rgba(8, 22, 18, .13) 31%,
+      rgba(8, 22, 18, .79) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(8, 22, 18, .30) 0%,
+      rgba(8, 22, 18, .02) 70%
+    );
+}
+
+.hir-visual-content {
+  left: 38px;
+  right: 42px;
+  bottom: 34px;
+}
+
+.hir-location {
+  margin-bottom: 14px;
+  font-size: 8px;
+  letter-spacing: .17em;
+  opacity: .9;
+}
+
+.hir-visual h1 {
+  max-width: 570px;
+  font-size: clamp(2.7rem, 3.8vw, 3.9rem);
+  line-height: .99;
+  letter-spacing: -.052em;
+  font-weight: 640;
+}
+
+.hir-visual-content > p {
+  max-width: 475px;
+  margin-top: 16px;
+  font-size: 13.5px;
+  line-height: 1.62;
+  color: rgba(255,255,255,.76);
+}
+
+/* PACKAGE */
+
+.hir-package {
+  margin-top: 25px;
+  padding: 20px 0;
+  grid-template-columns: 165px 1fr;
+  gap: 25px;
+}
+
+.hir-package-price > span {
+  font-size: 8px;
+}
+
+.hir-package-price strong {
+  font-size: 28px;
+  font-weight: 680;
+}
+
+.hir-package-benefits {
+  gap: 7px;
+}
+
+.hir-package-benefits span {
+  font-size: 10.7px;
+  color: rgba(255,255,255,.75);
+}
+
+.hir-links {
+  margin-top: 18px;
+}
+
+.hir-links a {
+  font-size: 10.4px;
+}
+
+/* FORM SIDE */
+
+.hir-form-side {
+  min-height: 665px;
+  padding: 54px 50px;
+  background:
+    radial-gradient(
+      circle at 100% 0,
+      rgba(185, 159, 108, .055),
+      transparent 33%
+    ),
+    #f7f4ee;
+  border-left: 1px solid rgba(23,34,30,.06);
+}
+
+.hir-form-card {
+  max-width: 500px;
+}
+
+.hir-form-head {
+  margin-bottom: 32px;
+}
+
+.hir-form-head > span {
+  margin-bottom: 10px;
+  font-size: 8px;
+  letter-spacing: .18em;
+}
+
+.hir-form-head h2 {
+  font-size: 29px;
+  font-weight: 650;
+  letter-spacing: -.036em;
+}
+
+.hir-form-head p {
+  margin-top: 9px;
+  color: #7c827e;
+  font-size: 11.5px;
+}
+
+/* cleaner form fields */
+
+.hir-form-card .interest-form {
+  gap: 19px 16px;
+}
+
+.hir-form-card .field label {
+  margin-bottom: 6px;
+  font-size: 7.7px;
+  letter-spacing: .08em;
+}
+
+.hir-form-card .field input,
+.hir-form-card .field select {
+  height: 47px;
+  padding: 0 3px;
+  border-bottom-color: #cec9bf;
+  font-size: 11.8px;
+}
+
+.hir-form-card .field input:hover,
+.hir-form-card .field select:hover {
+  border-bottom-color: #949a95;
+}
+
+.hir-form-card .field input:focus,
+.hir-form-card .field select:focus {
+  border-bottom-color: #17503f;
+  background: rgba(255,255,255,.22);
+}
+
+.hir-form-card .consent-row {
+  margin-top: 2px;
+  font-size: 9px;
+  color: #818682;
+}
+
+.hir-form-card .submit-button {
+  height: 50px;
+  margin-top: 5px;
+  border-radius: 3px;
+  font-size: 11px;
+  box-shadow:
+    0 8px 18px rgba(23,79,64,.10);
+}
+
+.hir-form-card .submit-button:hover {
+  box-shadow:
+    0 12px 24px rgba(23,79,64,.15);
+}
+
+/* hide previous extra meta if old markup remains during refresh */
+
+.hir-form-meta {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .hir-home-shell {
+    min-height: auto;
+  }
+
+  .hir-visual {
+    min-height: 625px;
+  }
+
+  .hir-form-side {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hir-visual h1 {
+    font-size: 2.65rem;
+  }
+
+  .hir-visual-content {
+    left: 21px;
+    right: 21px;
+  }
+
+  .hir-form-side {
+    padding: 40px 22px 48px;
+  }
+}
+/* ======================================================
+   HIRK PREMIUM — FINAL POLISH
+   ====================================================== */
+
+.hir-home-shell {
+  grid-template-columns: 1.09fr .91fr;
+  min-height: 650px;
+  box-shadow:
+    0 24px 60px rgba(34, 30, 25, 0.065);
+}
+
+/* Make image feel calmer / more intentional */
+.hir-visual {
+  min-height: 650px;
+}
+
+.hir-visual-image {
+  object-position: 58% 47%;
+  filter:
+    saturate(.64)
+    contrast(.98)
+    brightness(.88);
+}
+
+.hir-visual-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 22, 18, .03) 0%,
+      rgba(8, 22, 18, .11) 30%,
+      rgba(8, 22, 18, .82) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(8, 22, 18, .32) 0%,
+      rgba(8, 22, 18, .03) 74%
+    );
+}
+
+/* Move left content slightly up */
+.hir-visual-content {
+  bottom: 38px;
+}
+
+.hir-visual h1 {
+  font-size: clamp(2.65rem, 3.65vw, 3.72rem);
+  max-width: 540px;
+}
+
+.hir-visual-content > p {
+  max-width: 455px;
+  font-size: 13px;
+  line-height: 1.62;
+}
+
+/* A little tighter and more refined */
+.hir-package {
+  margin-top: 22px;
+  padding: 18px 0;
+}
+
+.hir-package-price strong {
+  font-size: 27px;
+}
+
+.hir-package-benefits span {
+  font-size: 10.4px;
+}
+
+.hir-links {
+  margin-top: 17px;
+}
+
+/* RIGHT SIDE */
+
+.hir-form-side {
+  min-height: 650px;
+  padding: 48px 54px;
+  background:
+    radial-gradient(
+      circle at 90% 4%,
+      rgba(185, 159, 108, .07),
+      transparent 31%
+    ),
+    #f8f6f1;
+}
+
+.hir-form-card {
+  max-width: 490px;
+}
+
+/* stronger hierarchy */
+.hir-form-head {
+  margin-bottom: 30px;
+}
+
+.hir-form-head > span {
+  color: #17503f;
+  font-size: 7.8px;
+}
+
+.hir-form-head h2 {
+  font-size: 28px;
+  letter-spacing: -.04em;
+}
+
+.hir-form-head p {
+  color: #747b77;
+}
+
+/* More premium / usable form lines */
+.hir-form-card .field input,
+.hir-form-card .field select {
+  height: 48px;
+  border-bottom: 1px solid #bdb8ae;
+  color: #17221e;
+}
+
+.hir-form-card .field input::placeholder {
+  color: #aaa69e;
+}
+
+.hir-form-card .field label {
+  color: #56605b;
+}
+
+/* Better focus state */
+.hir-form-card .field input:focus,
+.hir-form-card .field select:focus {
+  border-bottom: 1.5px solid #17503f;
+  background: transparent;
+}
+
+/* Consent less visually dominant */
+.hir-form-card .consent-row {
+  color: #858a86;
+  font-size: 8.7px;
+}
+
+/* CTA */
+.hir-form-card .submit-button {
+  height: 51px;
+  margin-top: 7px;
+  background: #164d3e;
+  border-radius: 2px;
+  font-size: 11px;
+  letter-spacing: .005em;
+}
+
+.hir-form-card .submit-button:hover {
+  background: #103a2f;
+  transform: translateY(-1px);
+}
+
+/* Slightly tighter desktop framing */
+@media (min-width: 1200px) {
+  .hir-home-shell {
+    width: min(1280px, calc(100% - 80px));
+  }
+}
+/* ======================================================
+   HIRK PREMIUM FOOTER
+   ====================================================== */
+
+.hirk-footer {
+  background: #122f27;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.hirk-footer-inner {
+  width: min(1280px, calc(100% - 80px));
+  margin: 0 auto;
+  min-height: 150px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.hirk-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.hirk-footer-brand img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+
+  filter: brightness(0) invert(1);
+  opacity: .92;
+}
+
+.hirk-footer-brand strong {
+  display: block;
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hirk-footer-brand span {
+  display: block;
+  margin-top: 4px;
+
+  color: rgba(255,255,255,.52);
+
+  font-size: 7.5px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.hirk-footer-message {
+  margin: 0;
+
+  color: rgba(255,255,255,.68);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+.hirk-footer-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+}
+
+.hirk-footer-nav a {
+  color: rgba(255,255,255,.72);
+
+  font-size: 10.5px;
+  font-weight: 650;
+
+  transition:
+    color .17s ease,
+    opacity .17s ease;
+}
+
+.hirk-footer-nav a:hover {
+  color: white;
+}
+
+.hirk-footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 11px 15px;
+
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 3px;
+}
+
+.hirk-footer-cta span {
+  color: #d5b979;
+
+  transition: transform .17s ease;
+}
+
+.hirk-footer-cta:hover span {
+  transform: translateX(3px);
+}
+
+/* Lower line */
+
+.hirk-footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.hirk-footer-bottom > div {
+  width: min(1280px, calc(100% - 80px));
+  height: 49px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: rgba(255,255,255,.34);
+
+  font-size: 8px;
+  font-weight: 650;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+  .hirk-footer-inner {
+    width: calc(100% - 40px);
+    padding: 36px 0;
+
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hirk-footer-message {
+    text-align: left;
+  }
+
+  .hirk-footer-nav {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .hirk-footer-bottom > div {
+    width: calc(100% - 40px);
+    height: auto;
+    padding: 17px 0;
+
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+}

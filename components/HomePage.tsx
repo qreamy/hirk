@@ -1,60 +1,94 @@
-'use client'
-
 import Link from 'next/link'
 import Header from './Header'
 import InterestForm from './InterestForm'
+import Footer from './Footer'
 
-export default function HomePage(){
+export default function HomePage() {
   return (
     <div className="site-shell">
       <Header />
 
-      <main className="home-main">
-        <div className="home-grid">
-          <section className="home-copy" aria-labelledby="main-title">
-            <span className="home-kicker">Företagspartner · Hittarps Ridklubb</span>
+      <main className="hir-home">
+        <div className="hir-home-shell">
 
-            <h1 id="main-title">Bli partner till Hittarps Ridklubb</h1>
-            <p className="home-lead">
-              Stötta en lokal förening för barn och unga – och bli en del av nätverket runt klubben.
-            </p>
+          <section className="hir-visual">
+            <img
+              src="/hirk-hero.jpg"
+              alt="Häst och ryttare i stallmiljö"
+              className="hir-visual-image"
+            />
 
-            <div className="package-inline">
-              <div className="package-price-wrap">
-                <span className="package-name">1975-klubben</span>
-                <div className="package-price">1 975 kr <small>/ år</small></div>
+            <div className="hir-visual-overlay" />
+
+            <div className="hir-visual-content">
+              <span className="hir-location">
+                HITTARP · LARÖD · HELSINGBORG
+              </span>
+
+              <h1>
+                Bli partner till
+                <br />
+                Hittarps Ridklubb.
+              </h1>
+
+              <p>
+                Stötta en lokal förening för barn och unga – och bli en del
+                av nätverket runt klubben.
+              </p>
+
+              <div className="hir-package">
+                <div className="hir-package-price">
+                  <span>1975-klubben</span>
+
+                  <strong>
+                    1 975 kr
+                    <small>/ år</small>
+                  </strong>
+                </div>
+
+                <div className="hir-package-benefits">
+                  <span>Synlighet på 1975-planschen</span>
+                  <span>Inbjudan till årligt partnermingel</span>
+                  <span>Stöd till barn- och ungdomsverksamheten</span>
+                </div>
               </div>
-              <div className="package-points">
-                <span>Namn på 1975-klubben-planschen</span>
-                <span>Inbjudan till årligt partnermingel</span>
-                <span>Stöd till klubbens barn- och ungdomsverksamhet</span>
+
+              <div className="hir-links">
+                <Link href="/partnerskap">
+                  Läs om partnerskapet <span>→</span>
+                </Link>
+
+                <Link href="/om-hirk">
+                  Om Hittarps Ridklubb <span>→</span>
+                </Link>
               </div>
-            </div>
-
-            <div className="home-actions">
-              <Link href="/partnerskap">Läs mer om partnerskapet <span>→</span></Link>
-              <Link href="/om-hirk">Om Hittarps Ridklubb <span>→</span></Link>
-            </div>
-
-            <div className="home-meta" aria-label="Fakta om Hittarps Ridklubb">
-              <span><strong>1975</strong> grundad</span>
-              <span><strong>ca 250</strong> medlemmar</span>
-              <span><strong>Hittarp & Laröd</strong></span>
             </div>
           </section>
 
-          <section id="intresse" className="interest-panel" aria-label="Intresseanmälan">
-            <div className="interest-panel-head">
-              <div>
-                <span className="panel-kicker">Intresseanmälan</span>
-                <h2>Vi hör gärna från er.</h2>
+          <section
+            id="intresse"
+            className="hir-form-side"
+            aria-label="Intresseanmälan"
+          >
+            <div className="hir-form-card">
+              <div className="hir-form-head">
+                <span>INTRESSEANMÄLAN</span>
+
+                <h2>Vill ert företag vara med?</h2>
+
+                <p>
+                  Lämna era uppgifter så hör vi av oss personligen.
+                </p>
               </div>
+
+              <InterestForm />
             </div>
-            <p className="panel-copy">Fyll i era uppgifter så kontaktar vi er personligen.</p>
-            <InterestForm />
           </section>
+
         </div>
       </main>
+
+      <Footer />
     </div>
   )
 }
